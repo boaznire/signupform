@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טופס הצטרפות ללקוחות חדשים - מילקי תיירות</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h2 {
+            color: #0066cc;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #0066cc;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #0066cc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #004499;
+        }
+        .phone-input {
+            display: flex;
+            gap: 10px;
+        }
+        .phone-input select {
+            width: 30%;
+        }
+        .phone-input input {
+            width: 70%;
+        }
+        #confirmation {
+            display: none;
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="signupForm" action="https://formsubmit.co/boaznire@gmail.com" method="POST">
+        <h2>טופס הצטרפות ללקוחות חדשים</h2>
+        <label for="first_name">שם פרטי:</label>
+        <input type="text" id="first_name" name="first_name" required>
+        
+        <label for="last_name">שם משפחה:</label>
+        <input type="text" id="last_name" name="last_name" required>
+        
+        <label for="email">כתובת דואר אלקטרוני:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="city">עיר:</label>
+        <input type="text" id="city" name="city" required>
+        
+        <label for="phone">מספר טלפון:</label>
+        <div class="phone-input">
+            <select id="phone_prefix" name="phone_prefix" required>
+                <option value="">בחר קידומת</option>
+                <option value="050">050</option>
+                <option value="051">051</option>
+                <option value="052">052</option>
+                <option value="053">053</option>
+                <option value="054">054</option>
+                <option value="055">055</option>
+                <option value="058">058</option>
+            </select>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{7}" required>
+        </div>
+        
+        <label for="destination">יעד מבוקש:</label>
+        <input type="text" id="destination" name="destination" required>
+        
+        <label for="people">מספר אנשים:</label>
+        <input type="number" id="people" name="people" min="1" required>
+        
+        <label for="date">תאריך טיסה:</label>
+        <input type="date" id="date" name="date" required>
+        
+        <label for="comments">הערות:</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+        
+        <input type="hidden" name="_subject" value="New signup submission!">
+        <input type="hidden" name="_autoresponse" value="תודה על פנייתך למילקי תיירות. המייל שלך התקבל וסוכן שלנו יצור עימך קשר בהקדם.">
+        <input type="hidden" name="_template" value="table">
+        
+        <input type="submit" value="שליחה">
+    </form>
+</body>
+</html>
